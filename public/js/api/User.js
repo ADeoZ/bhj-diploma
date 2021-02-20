@@ -30,8 +30,6 @@ class User {
     static current() {
         if (localStorage.getItem('user') !== null) {
             return JSON.parse(localStorage.getItem('user'));
-        } else {
-            return undefined;
         }
     }
 

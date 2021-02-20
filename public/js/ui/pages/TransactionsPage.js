@@ -58,7 +58,7 @@ class TransactionsPage {
             return;
         }
 
-        if (window.confirm("Вы действительно хотите удалить счёт?")) {
+        if (confirm("Вы действительно хотите удалить счёт?")) {
             Account.remove(this.lastOptions.account_id, (err, response) => {
                 if (response.success) {
                     this.clear();
@@ -74,7 +74,7 @@ class TransactionsPage {
      * По удалению транзакции вызовите метод App.update()
      * */
     removeTransaction(id) {
-        if (window.confirm("Вы действительно хотите удалить эту транзакцию?")) {
+        if (confirm("Вы действительно хотите удалить эту транзакцию?")) {
             Transaction.remove(id, (err, response) => {
                 if (response.success) {
                     App.update();
